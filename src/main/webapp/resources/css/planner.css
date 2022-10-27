@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+#plannerMainTable {
+	width: 100%;
+	
+}
+
+#plannerMainTable table {
+	width: 90%;
+	height: 95%;
+	background-color: white;
+	border-radius: 5pt;
+	margin-top: 5px;
+}
+
+.contentTitleTd {
+	border-bottom: black solid 1pt;
+	display: flex;
+	width: 90%;
+	min-width: 100px;	
+   	justify-content: space-between;
+    align-items: baseline;
+}
+
+#toDoTable {
+	min-height: 500px;
+}
+
+#checkListTable, #reviewTable {
+	min-height: 200px;
+	
+}
+
+.contentTitleTr {
+	height: 30px;
+}

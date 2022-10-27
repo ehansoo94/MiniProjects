@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+#loginTable {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.whatToInput {
+	padding-right: 5px;
+	height: 30px;
+}
+
+#loginButton {
+	height: 40pt;
+	width: 45pt;
+	margin-left: 5pt;
+	border: 0;
+	color: rgb(233, 233, 233);
+	background-color: rgb(128, 128, 128);
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+	
+}
+
+#loginButton:hover {
+	background-color: rgb(215, 215, 215);
+	color: rgb(128, 128, 128);
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#titleTh {
+	padding-bottom: 15pt;
+}
+
+#buttonTd {
+	padding-top: 15pt;
+}
+
+#signUpButton {
+	background-color: white;
+	border: 0;
+	font-size: 12pt;
+}
+
+#signUpButton:hover {
+	cursor: pointer;
+}

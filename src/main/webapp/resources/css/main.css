@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	background-color: rgb(245, 245, 245);
+}
+
+#siteTable {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	width: 90%;
+	max-width: 1100px;
+}
+
+#dateTd {
+	width: 100%;
+	min-width: 600px;
+	border-bottom: black solid 2pt;
+	
+	display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+	
+}
+
+#dateSpan{
+	font-size: 25pt;
+}
+
+#functionSpan{
+	font-size: 12pt;
+}
