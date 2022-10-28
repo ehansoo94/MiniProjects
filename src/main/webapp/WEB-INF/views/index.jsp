@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인(서브)</title>
+<title>플래너 로그인</title>
 <link rel="stylesheet" type="text/css" href="resources/css/index.css">
 <link rel="stylesheet" type="text/css" href="resources/css/login.css">
 </head>
