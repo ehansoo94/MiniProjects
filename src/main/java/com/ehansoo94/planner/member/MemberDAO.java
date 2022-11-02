@@ -62,7 +62,8 @@ public class MemberDAO {
 	
 	public static boolean loginCheck(HttpServletRequest req) {
 		Member m = (Member) req.getSession().getAttribute("loginMember");
-		if (m != null) { 		/* 로그인 성공 or 로그인 상태 */
+		if (m != null) {
+			// 로그인에 성공했거나 이미 로그인 상태임
 			return true;
 		}
 		return false;
