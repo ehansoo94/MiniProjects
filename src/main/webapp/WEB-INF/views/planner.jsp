@@ -5,11 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>플래너 내용</title>
+<script type="text/javascript">
+	
+</script>
 </head>
 <body>
 	<table id="plannerMainTable">
 		<tr>
 			<td id="toDoTd" rowspan="2" valign="top">
+				<form action="dailyboard.insertschedule" method="post">
 				<table id="toDoTable">
 					<tr class="contentTitleTr">
 						<td class="contentTitleTd">
@@ -18,9 +22,12 @@
 						</td>
 					</tr>
 					<tr>
-						<td valign="top">내용</td>
+						<td valign="top">
+							<textarea name="scheduleText">${viewDailyBoard.d_schedule }</textarea> 
+						</td>
 					</tr>
 				</table>
+				</form>
 			</td>
 			<td valign="top">
 				<table id="checkListTable">
@@ -31,7 +38,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td valign="top">내용</td>
+						<td valign="top">${viewDailyBoard.d_to_do_list }</td>
 					</tr>
 				</table>
 			</td>
@@ -46,7 +53,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td valign="top">내용</td>
+						<td valign="top">${viewDailyBoard.d_review }</td>
 					</tr>
 				</table>
 			</td>

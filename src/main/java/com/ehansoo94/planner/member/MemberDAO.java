@@ -1,5 +1,7 @@
 package com.ehansoo94.planner.member;
 
+import java.util.Date;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -43,6 +45,10 @@ public class MemberDAO {
 					Member m = mm.getMember(input_id);
 					req.getSession().setAttribute("loginMember", m);
 					req.getSession().setMaxInactiveInterval(600);
+					
+					// 로그인 시 오늘의 할 일을 바로 보여주기 위해 오늘 날짜를 설정.
+					Date viewDate = new Date();
+					req.getSession().setAttribute("viewDate", viewDate);
 					
 					Cookie cookie = new Cookie("lastLoginId", input_id);
 					cookie.setMaxAge(60 * 60 * 7);

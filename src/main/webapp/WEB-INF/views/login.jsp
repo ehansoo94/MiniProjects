@@ -18,7 +18,7 @@
 			</tr>
 			<tr>
 				<td class="whatToInput">비밀번호</td>
-				<td><input name="input_pw" autocomplete="off" placeholder="비밀번호를 입력해주세요" maxlength="12"></td>
+				<td><input name="input_pw" type="password" autocomplete="off" placeholder="비밀번호를 입력해주세요" maxlength="12"></td>
 			</tr>
 			<tr>
 				<td colspan="3" align="right" >

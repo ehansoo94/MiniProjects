@@ -14,11 +14,16 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.ehansoo94.planner.dailyboard.DailyBoardDAO;
+
 @Controller
 public class MemberController {
 
 	@Autowired
 	private MemberDAO mDAO;
+	
+	@Autowired
+	private DailyBoardDAO dayDAO;
 	
 	// 로그인
 	@RequestMapping(value="/member.login", method = RequestMethod.POST)
@@ -31,6 +36,8 @@ public class MemberController {
 		mDAO.login(req, res);
 		if (MemberDAO.loginCheck(req)) {
 			req.setAttribute("content", "planner.jsp");
+			dayDAO.createDailyBoard(req);
+			dayDAO.getDailyBoard(req);
 			return "main";
 		}
 		

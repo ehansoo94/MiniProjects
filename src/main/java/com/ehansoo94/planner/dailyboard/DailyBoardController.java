@@ -29,12 +29,14 @@ public class DailyBoardController {
 			// 없다면 insert 문을 실행
 			// 이후 select 문을 실행해 값을 가져온다.
 				// 이후 보기좋게 나타내는 것은 jsp 에서 이루어짐.
+		dayDAO.createDailyBoard(req);
+		dayDAO.getDailyBoard(req);
 		
 		req.setAttribute("content", "planner.jsp");
 		return "main";
 	}
 	
-	@RequestMapping(value="/dailyboard.insertScedule", method = RequestMethod.POST)
+	@RequestMapping(value="/dailyboard.insertschedule", method = RequestMethod.POST)
 	public String insertSchedule(Model model, HttpServletRequest req) {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 E요일");
@@ -42,7 +44,9 @@ public class DailyBoardController {
 		model.addAttribute("date", sdf.format(date));
 		
 		// 추가할 기능
-			// scedule 의 내용을 변경하는 update문 실행하기
+			// schedule 의 내용을 변경하는 update문 실행하기
+		
+		dayDAO.insertSchedule(req);
 		
 		req.setAttribute("content", "planner.jsp");
 		return "main";

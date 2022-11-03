@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ehansoo94.planner.dailyboard.dailyBoardMapper">
-	<insert id="createDailyBoard">
-		insert into MiniProject_01_Planner_#{m_id}_dailyboard values(to_date(#{m_date}, 'DDMMRR'), null, null, null)
+<mapper namespace="com.ehansoo94.planner.dailyboard.DailyBoardMapper">
+	<insert id="createDailyBoard" parameterType="String">
+		insert into Planner01_dayboard values(#{d_userID_and_date}, null, null, null)
 	</insert>
-	<update id="insertTodoList" parameterType="com.ehansoo94.planner.dailyboard.DailyBoard">
-		update MiniProject_01_Planner_#{user }_dailyboard set d_to_do_list = ${d_to_do_list}
+	<update id="insertTodoList" parameterType="String">
+		update Planner01_dayboard set d_to_do_list = #{TodoList}
 	</update>
-	<update id="insertSchedule" parameterType="com.ehansoo94.planner.dailyboard.DailyBoard">
-		update MiniProject_01_Planner_#{user }_dailyboard set d_scedule = ${d_scedule}
+	<update id="insertSchedule" parameterType="String">
+		update Planner01_dayboard set d_schedule = #{Schedule}
 	</update>
-	<update id="insertReview" parameterType="com.ehansoo94.planner.dailyboard.DailyBoard">
-		update MiniProject_01_Planner_#{user }_dailyboard set d_review = ${d_review}
+	<update id="insertReview" parameterType="String">
+		update Planner01_dayboard set d_review = #{Review}
 	</update>
+	<select id="getDailyBoard" parameterType="String" resultType="com.ehansoo94.planner.dailyboard.DailyBoard">
+		select * from Planner01_dayboard where d_userID_and_date = #{d_userID_and_date}
+	</select>
 </mapper>

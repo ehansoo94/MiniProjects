@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ehansoo94.planner.member.MemberMapper">
 	<insert id="signup" parameterType="com.ehansoo94.planner.member.Member">
-		insert into MiniProject_01_Planner_Member values(#{m_id}, #{m_pw})
+		insert into Planner01_Member values(#{m_id}, #{m_pw})
 	</insert>
 	<select id="getMember" resultType="com.ehansoo94.planner.member.Member">
-		select * from MiniProject_01_Planner_Member where m_id = #{input_id}
+		select * from Planner01_Member where m_id = #{input_id}
 	</select>
 </mapper>
